@@ -1,0 +1,9 @@
+.navbar.navbar-expand-lg.fixed-top{
+  background-color: #ffffff;
+  padding: 0.7rem 0.7rem;
+}
+.nav-link{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 1000;
+}
