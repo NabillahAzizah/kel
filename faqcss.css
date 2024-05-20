@@ -1,0 +1,90 @@
+.header {
+  font-family: Verdana, sans-serif; /* Mengatur font family menjadi Verdana */
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: -40px;
+}
+
+  .accordion.accordion-flush {
+  max-width: 1350px !important;
+  margin: 10px auto;
+  box-shadow: 0 2px 25px 0 rgba(110, 130, 208, .18);
+   --bs-accordion-btn-bg: #B1E9A3;
+}
+
+.teks1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.teks2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.faqbg {
+  background-color: #F9F8F3;
+}
+
+.bottom-border{
+  max-width: 1350px !important;
+  margin: 50px auto;
+  border-bottom: 3px solid black;
+  padding-bottom: 10px;
+    }
+
+.accordion-header {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.accordion-button {
+  font-family: 'Open Sans', sans-serif;
+  padding: 2rem 2rem; /* Increase padding for accordion buttons */
+  font-size: 1.5rem; /* Increase font size for accordion buttons */
+}
+
+.accordion-body {
+  font-family: 'Lato', sans-serif; /* Mengatur font family Lato */
+  padding: 1rem 2rem; 
+  font-size: 1.5rem; 
+}
+
+.img-fluid{
+  width: 100%;
+}
+        .card-img-overlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .card-title {
+            font-size: 1.5rem; /* Default size for small screens */
+        }
+        .card-text {
+            font-size: 1rem; /* Default size for small screens */
+        }
+        @media (min-width: 576px) {
+            .card-title {
+                font-size: 2rem;
+            }
+            .card-text {
+                font-size: 1.25rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .card-title {
+                font-size: 2.5rem;
+            }
+            .card-text {
+                font-size: 1.5rem;
+            }
+        }
