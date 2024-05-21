@@ -1,0 +1,602 @@
+/* Logo */
+.navbar-nav .nav-link {
+    color: inherit; /* Menggunakan warna teks default */
+    transition: color 0.3s; /* Menambahkan transisi halus */
+}
+
+.navbar-nav .nav-link:hover {
+    color: green; /* Mengubah warna teks menjadi merah saat dihover */
+}
+.navbar-nav .nav-link.active {
+color: green; /* Mengubah warna teks menjadi merah saat aktif */
+}
+@media (max-width: 360px){
+    .logo{
+        width: 100px;
+        height: 77px;
+    }
+}
+
+/* Hero */
+.banner-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.card-img {
+    width: 100%;
+    height: auto; /* Ensure the image is responsive */
+}
+
+.banner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.233); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+.banner-text::after,
+.banner-text::before {
+    content: '';
+    display: block;
+    height: 22px; /* Adjust height as needed */
+    background-color: #95BB72; /* Line color */
+    position: absolute;
+    right: 8px;
+    border-radius: 18px;
+    z-index: -1; /* Ensure the line is behind the text */
+}
+
+.banner-text::after {
+    width: 8.6em; /* Menggunakan em untuk lebar garis */
+    top: calc(0.7em + 1rem); /* Menggunakan em dan rem untuk posisi teks */
+}
+
+.banner-text::before {
+    width: 11em; /* Tidak mengubahnya karena posisi garis relatif terhadap teks */
+    top: calc(2.65em + 1rem); /* Menggunakan em dan rem untuk posisi teks */
+}
+
+.banner-text {
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    right: 10%; /* Adjust this value to fine-tune the text's right position */
+    color: white;
+    text-align: right;
+    padding: 1rem;
+    font-size: 2.7vw;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.985), 3px 3px 6px rgba(0, 0, 0, 0.693);/* Text shadow */
+    transform: scaleY(1.1);
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.horizontal-line {
+    width: 100%;
+    height: 15px; /* Adjust height as needed */
+    background-color: #95BB72; /* Line color */
+}
+
+@media (max-width: 820px) {
+    .banner-text {
+        font-size: 2.5vw; /* Adjust font size for smaller screens */
+    }
+    .banner-text::after {
+        width: 9.2em; /* Menggunakan em untuk lebar garis di media query */
+        top: calc(1.1em + 0.5rem); /* Menggunakan em dan rem untuk posisi teks di media query */
+        height: 12px;
+        right: 11px;
+    }
+
+    .banner-text::before {
+        width: 11.8em; /* Menggunakan em untuk lebar garis di media query */
+        top: calc(3.4em + 0.5rem); /* Menggunakan em dan rem untuk posisi teks di media query */
+        height: 12px;
+        right: 11px;
+    }
+    .horizontal-line {
+        width: 100%;
+        height: 10px; /* Adjust height as needed */
+        background-color: #95BB72; /* Line color */
+}
+}
+
+@media (max-width: 480px) { /* Menargetkan layar mobile */
+    .banner-text {
+        font-size: 2.3vw; /* Menyesuaikan ukuran font untuk layar mobile */
+    }
+
+    .banner-text::after {
+        width: 22.5vw; /* Menyesuaikan lebar garis horizontal untuk layar mobile */
+        top: calc(1.5em + 0.5rem); /* Menyesuaikan posisi garis horizontal untuk layar mobile */
+        height: 6px; /* Menyesuaikan tinggi garis horizontal untuk layar mobile */
+        right: 15px; /* Menyesuaikan posisi garis horizontal untuk layar mobile */
+    }
+
+    .banner-text::before {
+        width: 29vw; /* Menyesuaikan lebar garis horizontal untuk layar mobile */
+        top: calc(4.7em + 0.5rem); /* Menyesuaikan posisi garis horizontal untuk layar mobile */
+        height: 6px; /* Menyesuaikan tinggi garis horizontal untuk layar mobile */
+        right: 15px;/* Menyesuaikan posisi garis horizontal untuk layar mobile */
+    }
+}
+@media (max-width: 360px) { /* Menargetkan layar mobile */
+    .banner-text {
+        font-size: 2.5vw; /* Menyesuaikan ukuran font untuk layar mobile */
+    }
+
+    .banner-text::after {
+        width: 25vw; /* Menyesuaikan lebar garis horizontal untuk layar mobile */
+        top: calc(1.5em + 0.5rem); /* Menyesuaikan posisi garis horizontal untuk layar mobile */
+        height: 6px; /* Menyesuaikan tinggi garis horizontal untuk layar mobile */
+        right: 15px; /* Menyesuaikan posisi garis horizontal untuk layar mobile */
+    }
+
+    .banner-text::before {
+        width: 32.5vw; /* Menyesuaikan lebar garis horizontal untuk layar mobile */
+        top: calc(4.77em + 0.5rem); /* Menyesuaikan posisi garis horizontal untuk layar mobile */
+        height: 6px; /* Menyesuaikan tinggi garis horizontal untuk layar mobile */
+        right: 15px;/* Menyesuaikan posisi garis horizontal untuk layar mobile */
+    }
+}
+
+/* Content */
+  .custom-content {
+    padding-top: 50px;
+}
+
+.custom-content img {
+    width: 500px;
+    height: 300px;
+    border-radius: 20px; 
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.844);
+}
+
+.custom-content h3 {
+    font-family: 'Roboto', sans-serif;
+    transform: scaleY(1.2);
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #4B6043;
+    text-align: left;
+}
+
+.custom-content p {
+    font-family: 'Segoe UI', sans-serif;
+    color: black;
+    text-align: justify;
+    font-size: 20px;
+}
+.custom-content ul{
+    text-align: left;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    list-style: circle;
+
+}
+.garis-teks {
+    height: 6px; /* Tinggi garis */
+    background-color: #95BB72; /* Warna garis */
+    border-radius: 10px; /* Sudut melengkung */
+    width: 100%; /* Panjang garis sesuai dengan lebar kolom */
+    margin: 10px 0; /* Jarak antara garis dan teks */
+}
+
+
+
+.tombol-container {
+    text-align: left; /* Menjadikan kontainer tombol diatur ke kiri */
+    padding-top: 20px;
+}
+
+.tombol {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 780;
+    color: white;
+    background-color: #95BB72;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.619);
+    transition: background-color 0.2s;
+}
+
+.custom-content img:hover {
+    transform: scale(1.006);
+}
+
+.custom-content .tombol:hover {
+    background-color: #4B6043;
+}
+
+@media (max-width: 768px) {
+    .custom-content {
+        padding-top: 30px;
+    }
+    
+    .custom-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px; 
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.844);
+    }
+    
+    .custom-content h3 {
+        font-family: 'Roboto', sans-serif;
+        transform: scaleY(1.1);
+        font-size: 14;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: #4B6043;
+        text-align: left;
+        margin-bottom: 2px;
+    }
+    
+    .custom-content p {
+        font-family: 'Open Sans', sans-serif;
+        color: black;
+        text-align: justify;
+        font-size: 12px;
+        margin-bottom: 9px;
+    }
+    .custom-content ul{
+        text-align: left;
+        font-weight: 2px;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 10px;
+        margin-top: -5px;
+        margin-left: -15px;
+        margin-bottom: 9px;
+        list-style-type:circle;
+    
+    }
+    .garis-teks {
+        height: 4px; /* Tinggi garis */
+        background-color: #95BB72; /* Warna garis */
+        border-radius: 10px; /* Sudut melengkung */
+        width: 100%; /* Panjang garis sesuai dengan lebar kolom */
+        margin: -5px 0; /* Jarak antara garis dan teks */
+    }
+    
+    .tombol-container {
+        text-align: left; /* Menjadikan kontainer tombol diatur ke kiri */
+        padding-top: 12px;
+    }
+    
+    .tombol {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 780;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        color: white;
+        background-color: #95BB72;
+        display: inline-block;
+        padding: 4px 8px;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.619);
+        transition: background-color 0.2s;
+    }
+}
+
+@media (max-width: 426px) {
+    .custom-content {
+        padding-top: 15px;
+    }
+    .custom-content img {
+        width: 240px;
+        height: 130px;
+        border-radius: 15px; 
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.844);
+    }
+
+    .custom-content h3 {
+        font-size: 14px;
+        margin-top: -10px;
+        text-align: center;
+    }
+
+    .custom-content p {
+        font-size: 12px;
+        text-align: center;
+    }
+    .custom-content ul {
+        font-size: 10px;
+        list-style:circle;
+    }
+
+    .tombol-container {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .tombol {
+        padding: 6px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    /* Mengatur urutan elemen untuk mobile */
+    .custom-content .col-mob:first-child {
+        order: 2;
+    }
+
+    .custom-content .col-mob:last-child {
+        order: 1;
+    }
+}
+
+/* quotes */
+.background-quotes {
+    padding-top: 50px;
+  }
+  
+  .quote-container {
+    padding: 30px;
+    background-image: url('/img/qoute.jpg');
+    background-color: #1e1e1e;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .quote-box {
+    background-color: transparent;
+    border-radius: 8px;
+    align-items: center;
+    
+  }
+  
+  .quote-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 3px solid #95bb72a4;
+  }
+  
+  .quote-text {
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+    font-style: italic;
+    color: white;
+  }
+  
+  .quote-author {
+    font-weight: bold;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+    @media (max-width: 768px) {
+        .quote-container {
+        padding: 20px;
+        }
+
+        .quote-box{
+            margin-bottom: -10px;
+            margin-top: -10px;
+        }
+    
+        .quote-image {
+        width: 60px;
+        height: 60px;
+        display: none;
+        }
+    
+        .quote-text {
+        font-size: 11px;
+        }
+    
+        .quote-author {
+        font-size: 10px;
+        }
+    }
+
+    @media (max-width: 426px) {
+        .quote-container {
+        padding: 10px;
+        }
+
+        .quote-box{
+            margin-bottom: -10px;
+            margin-top: -10px;
+        }
+
+        .quote-box1{
+            margin-bottom: -60px;
+        }
+    
+        .quote-image {
+        width: 50px;
+        height: 50px;
+        }
+    
+        .quote-text {
+        font-size: 9px;
+        }
+    
+        .quote-author {
+        font-size: 8px;
+        }
+    }
+
+  
+
+/* Footer */
+.footer {
+    background-color: #4B6043;
+    color: #fff;
+    padding: 60px 0 30px;
+  }
+  
+  .footer-logo {
+    width: 76%;
+    height: auto;
+    margin-top: -28px;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+
+    .footer-text.address {
+        margin-top: 0;
+    }
+  
+    .footer-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+  
+    .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    color: #F0E68C;
+  }
+
+  @media (max-width: 768px){
+    .footer {
+        padding: 30px 0 30px;
+      }
+    .footer-logo {
+        width: 67%;
+        height: auto;
+        margin-top: -10px;
+      }
+      
+      .footer-text {
+        font-size: 10px;
+        line-height: 1.5;
+        margin-top: 11px;
+      }
+    
+    .footer-text.address {
+        margin-top: 0;
+        font-size: 10px;
+    }
+      
+    .footer-heading {
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+      
+    .footer-links {
+        font-size: 10;
+        list-style: none;
+        padding: 0;
+        margin-top: 5px;
+        }
+      
+    .footer-links li {
+        margin-bottom: 10px;
+      }
+}
+
+  @media (max-width: 426px) {
+    .footer {
+        padding: 20px 0;
+    }
+    
+    .footer-logo {
+        width: 40%;
+    }
+
+    .footer-text {
+        font-size: 10px;
+        line-height: 1.5;
+        margin-top: 11px;
+      }
+    
+    .footer-text.address {
+        margin-top: 0;
+        font-size: 10px;
+    }
+      
+    .footer-heading {
+        font-size: 10px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+      
+    .footer-links {
+        font-size: 7;
+        list-style: none;
+        padding: 0;
+        margin-top: 5px;
+        margin-bottom: -15px;
+        }
+      
+    .footer-links li {
+        margin-bottom: 10px;
+      }
+    
+    .row-footer {
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .row-footer .col-ftr1, 
+    .row-footer .col-ftr2, 
+    .row-footer .col-ftr3,
+    .row-footer .col-ftr4 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Mengatur elemen heading dan link secara horizontal */
+    .footer-headings-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .footer-headings-container .col-ftr2,
+    .footer-headings-container .col-ftr3 {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    /* Mengatur urutan elemen untuk mobile */
+    .row-footer .col-ftr1 {
+        order: 2;
+    }
+
+    .row-footer .col-ftr4 {
+        order: 2;
+    }
+
+    .footer .col-ftr4 .footer-text.address {
+        margin-top: -20px;
+    }
+}
