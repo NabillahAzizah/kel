@@ -1,0 +1,462 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica, Verdana, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/* Navbar */
+nav {
+  position: static;
+  top: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  box-shadow: 5px 0 10px #000;
+  overflow: hidden;
+  z-index: 2;
+}
+
+nav a {
+  transition: all 0.2s;
+  position: relative;
+}
+
+nav a:hover {
+  color: #417c29;
+}
+
+nav a.active {
+  color: #4b6043;
+  font-weight: 700;
+}
+nav a.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #4b6043;
+  padding-top: 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand > img {
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.item-link {
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  margin: auto 24px;
+}
+
+.icon {
+  display: none;
+}
+/* end of Navbar */
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-heading {
+  position: absolute;
+  display: inline-block;
+  font-size: 46px;
+  letter-spacing: 20px;
+  text-shadow: 0 2px 4px #000;
+  text-transform: uppercase;
+}
+
+.image-wrap {
+  background-color: #b1e9a3;
+  opacity: 0.5;
+  z-index: -1;
+  width: 100%;
+}
+
+.hero-image {
+  height: 50%;
+  position: relative;
+  z-index: -1;
+  height: 560px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.hero-infos {
+  background-color: #fff;
+  position: absolute;
+  top: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.info-title {
+  margin: 10px auto;
+  display: inline-block;
+  background-color: #4b6043;
+  padding: 6px 20px;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 3px;
+}
+
+.info-detail {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  background-color: rgba(240, 230, 140, 0.2);
+  border-radius: 4px;
+  padding: 10px;
+}
+/* end of Hero */
+
+
+/* Halaman Layanan */
+/* Header */
+.header-layanan {
+  background: linear-gradient(#fffee7, #cdddbe);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.header-layanan h3 {
+  color: #daa520;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 45px;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+iframe {
+  width: 600px;
+}
+/* end of Header */
+
+/* Deskripsi */
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+}
+
+.description .texts {
+  width: 525px;
+}
+
+.description h5 {
+  font-size: 32px;
+  letter-spacing: 4px;
+  color: #daa520;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.description p {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.description button {
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #95bb72;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.description button:hover {
+  background-color: #daa520;
+}
+/* end of Deskripsi */
+
+/* Langkah */
+.steps {
+  background-color: rgba(205, 221, 190, 0.2);
+  padding: 60px 100px 40px;
+}
+
+.steps h5,
+.tools h5 {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 4px;
+  color: #daa520;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+}
+
+.step-cards {
+  margin: 40px 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 18px;
+  width: 48px;
+  height: 48px;
+  background-color: #f0e68c;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.step-container {
+  border-radius: 10px;
+  background-color: rgba(89, 125, 75, 0.7);
+  width: 320px;
+  padding: 12px 0 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.step-title {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 800;
+  font-style: italic;
+}
+.step-description {
+  width: 100%;
+  background-color: #f7fbf4;
+  border-radius: 10px;
+  margin-top: 15px;
+  padding: 20px 20px 20px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 16px;
+  width: 320px;
+  height: 135px;
+}
+/* end of Langkah */
+
+/* Peralatan */
+.tools {
+  padding: 60px 100px 20px;
+}
+
+.tools-menu {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.tool-image {
+  object-fit: contain;
+  width: 160px;
+}
+
+.tool-name {
+  display: inline-block;
+  width: 250;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #4b6043;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.tool-link {
+  display: inline-block;
+  background-color: #f4f1d5;
+  min-width: 240px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+/* end of Peralatan */
+
+/* end of Halaman Layanan */
+
+/* Responsive */
+
+@media (width <= 1360px) {
+  .tools-menu {
+    grid-template-columns: auto auto auto;
+  }
+}
+/* Desktop (lg) */
+@media (width <= 1199px) {
+  .description {
+    flex-direction: column;
+  }
+
+  .video {
+    width: 450px;
+    margin-top: 50px;
+  }
+
+  .video iframe {
+    width: 100%;
+  }
+  .tools-menu {
+    grid-template-columns: auto auto;
+  }
+}
+/* end of Desktop */
+
+/* Landscapte Tablet (md) */
+@media (width <= 991px) {
+  .menu {
+    display: none;
+  }
+
+  .menu.toggle {
+    display: inline-block;
+    position: absolute;
+    top: 64px;
+    background: #fff;
+    padding: 10px 20px;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  nav a.active::after {
+    top: -2px;
+    left: 5px;
+  }
+
+  .menu.toggle li a {
+    padding: 20px 10px;
+    display: inline-block;
+  }
+  .icon {
+    display: block;
+  }
+
+  .step-cards,
+  .tools-menu {
+    grid-template-columns: auto;
+  }
+}
+/* end of Landscapte Tablet */
+
+/* Tablet Breakpoint (sm) */
+@media (width <= 767px) {
+  .hero-infos {
+    flex-direction: column;
+    background-color: #fff;
+    top: 13%;
+  }
+  .hero-image {
+    height: 150vh !important;
+    object-fit: cover;
+  }
+
+  .header-layanan h3 {
+    font-size: 20px;
+    letter-spacing: 15px;
+    margin: auto;
+  }
+
+  .description h5 {
+    font-size: 20px;
+  }
+}
+/* end of Tablet Breakpoint */
+
+/* Mobile (xs) */
+@media (width < 576px) {
+  .nav-footer {
+    display: block;
+  }
+
+  .video {
+    width: 1034px;
+    height: 447;
+    margin-top: 50px;
+  }
+}
+/* end of Mobile */
